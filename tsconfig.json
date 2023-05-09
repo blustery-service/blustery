@@ -20,7 +20,10 @@
       }
     ],
     "paths": {
-      "@apps/*": ["./src/*"]
+      "@apps/*": ["./src/*"],
+      "@packages/*": ["./packages/*"],
+      "@utils": ["./packages/utils/index.ts"],
+      "@tailwind-config": ["./tailwind.config.js"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
