@@ -1,7 +1,4 @@
 import { Button, Typography } from '@packages/components';
-import Icon from '@packages/components/Icon';
-import Image from 'next/image';
-import chroma from 'chroma-js';
 
 export default function Home() {
   // hover: alpha(grey[500], 0.08),
@@ -9,14 +6,6 @@ export default function Home() {
   // disabled: alpha(grey[500], 0.8),
   // disabledBackground: alpha(grey[500], 0.24),
   // focus: alpha(grey[500], 0.24),
-
-  const test = {
-    hover: chroma('#919EAB').alpha(0.08).hex(),
-    selected: chroma('#919EAB').alpha(0.16).hex(),
-    disabled: chroma('#919EAB').alpha(0.8).hex(),
-    disabledBackground: chroma('#919EAB').alpha(0.24).hex(),
-    focus: chroma('#919EAB').alpha(0.24).hex(),
-  };
 
   return (
     <main className="flex flex-col items-center justify-center h-screen w-screen gap-2">
@@ -130,14 +119,24 @@ export default function Home() {
         </Button>
       </div> */}
       <div className="w-full">
-        <Typography variant="h1">123123</Typography>
-        <Typography variant="h2">123123</Typography>
-        <Typography variant="h3">123123</Typography>
-        <Typography variant="h4">123123</Typography>
-        <Typography variant="h5">123123</Typography>
-        <Typography variant="h6">123123</Typography>
-        <Typography variant="body1">123123</Typography>
-        <Typography variant="body2">123123</Typography>
+        <Typography variant="h1" color="text.secondary">
+          Heading
+        </Typography>
+        <Typography variant="h2">Heading</Typography>
+        <Typography variant="h3">Heading</Typography>
+        <Typography variant="h4">Heading</Typography>
+        <Typography variant="h5">Heading</Typography>
+        <Typography variant="h6">Heading</Typography>
+        <Typography variant="body1">Heading</Typography>
+        <Typography variant="body2">Heading</Typography>
+
+        <div className="flex flex-col">
+          <Typography variant="subtitle1">Heading</Typography>
+          <Typography variant="subtitle2">Heading</Typography>
+
+          <Typography variant="caption">Heading</Typography>
+        </div>
+        <Typography variant="body2">Heading</Typography>
       </div>
     </main>
   );
