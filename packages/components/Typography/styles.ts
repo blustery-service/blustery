@@ -9,8 +9,7 @@ export type Variants =
   | 'body2'
   | 'caption'
   | 'subtitle1'
-  | 'subtitle2'
-  | 'overline';
+  | 'subtitle2';
 
 export type TypographyPropsVariants = {
   h1?: React.ComponentProps<'a'>;
@@ -24,22 +23,31 @@ export type TypographyPropsVariants = {
   caption?: React.ComponentProps<'span'>;
   subtitle1?: React.ComponentProps<'span'>;
   subtitle2?: React.ComponentProps<'span'>;
-  overline?: React.ComponentProps<'span'>;
 };
 
+export type Color = 'primary' | 'secondary' | 'info' | 'warning' | 'error' | 'success' | 'text.secondary' | 'text';
+
 export const typographyStyles = {
-  root: 'tracking-normal',
-  h1: 'text-h1 font-extrabold',
-  h2: 'text-h2 font-extrabold',
-  h3: 'text-h3 font-bold',
-  h4: 'text-h4 font-bold',
-  h5: 'text-h5 font-bold',
-  h6: 'text-h6 font-bold',
-  body1: 'symbol',
-  body2: 'symbol',
-  caption: 'symbol',
-  subtitle1: 'symbol',
-  subtitle2: 'symbol',
-  overline: 'symbol',
-  // leadingNone: 'leading-none',
-};
+  root: 'tracking-normal font-sans',
+  h1: 'text-[58px] font-extrabold leading-normal',
+  h2: 'text-4xl font-extrabold leading-normal',
+  h3: 'text-3xl font-bold leading-normal',
+  h4: 'text-2xl font-bold leading-normal',
+  h5: 'text-xl font-bold leading-normal',
+  h6: 'text-lg font-bold leading-normal',
+  body1: 'text-base leading-6 font-normal',
+  body2: 'text-sm font-normal',
+  caption: 'text-xs font-normal',
+  subtitle1: 'text-base font-semibold',
+  subtitle2: 'text-sm font-semibold',
+  text: 'dark:text-white text-black',
+  primary: 'text-primary',
+  secondary: 'text-secondary',
+  info: 'text-info',
+  warning: 'text-warning',
+  error: 'text-error',
+  success: 'text-success',
+  underline: 'underline',
+  disable: 'text-disabled pointer-events-none select-none',
+  'text.secondary': 'text-neutral-600',
+} as any;

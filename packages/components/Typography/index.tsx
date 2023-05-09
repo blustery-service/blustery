@@ -1,5 +1,5 @@
 import React, { ReactNode } from 'react';
-import { TypographyPropsVariants, Variants, typographyStyles } from './styles';
+import { Color, TypographyPropsVariants, Variants, typographyStyles } from './styles';
 import { twMerge } from 'tailwind-merge';
 import { classNames, objectToString } from '@packages/utils';
 
@@ -15,29 +15,33 @@ const variantMapping: Record<Variants, keyof JSX.IntrinsicElements> = {
   caption: 'span',
   subtitle1: 'span',
   subtitle2: 'span',
-  overline: 'span',
 };
 
 export type CommonProps = {
   variant?: Variants;
   children?: ReactNode;
+  color?: Color;
+  disable?: boolean;
+  underline?: boolean;
   // Add any additional props you want to support
 };
 export type TypographyProps = CommonProps & TypographyPropsVariants[Variants];
 
 const Typography = (props: TypographyProps) => {
-  const { variant = 'body2', children, className } = props;
+  const { variant = 'body2', children, className, color = 'text', disable, underline } = props;
 
   const Components = variantMapping[variant];
 
   const objectClasses = {
     [variant]: typographyStyles[variant],
+    [color]: typographyStyles[color],
     root: typographyStyles.root,
   };
 
   const classes = twMerge(
     classNames(objectToString(objectClasses), {
-      leadingNone: true,
+      [typographyStyles.disable]: disable,
+      underline: underline,
     }),
     className
   );
