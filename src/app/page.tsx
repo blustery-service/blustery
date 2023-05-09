@@ -1,12 +1,6 @@
 import { Button, Typography } from '@packages/components';
 
 export default function Home() {
-  // hover: alpha(grey[500], 0.08),
-  // selected: alpha(grey[500], 0.16),
-  // disabled: alpha(grey[500], 0.8),
-  // disabledBackground: alpha(grey[500], 0.24),
-  // focus: alpha(grey[500], 0.24),
-
   return (
     <main className="flex flex-col items-center justify-center h-screen w-screen gap-2">
       {/* <div className="flex gap-2">
