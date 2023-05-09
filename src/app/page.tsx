@@ -136,6 +136,7 @@ export default function Home() {
 
           <Typography variant="caption">Heading</Typography>
         </div>
+        <Typography variant="body2">Heading</Typography>
       </div>
     </main>
   );
