@@ -2,9 +2,9 @@ import { ButtonProps as MuiButtonProps, Button as MuiButton } from '@mui/materia
 import React from 'react';
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars, @typescript-eslint/no-empty-interface
-export interface IButtonProps extends MuiButtonProps {}
+export interface ButtonProps extends MuiButtonProps {}
 
-const Button = (props: IButtonProps) => {
+const Button = (props: ButtonProps) => {
   const { children, variant = 'contained', color = 'primary', size = 'medium', ...other } = props;
 
   return (

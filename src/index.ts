@@ -1,3 +1,4 @@
+'use client';
 export * from './theme/color';
 export * from './shared';
 export * from './theme/palette';

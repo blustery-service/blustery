@@ -15,6 +15,6 @@
     "allowSyntheticDefaultImports": true,
     "esModuleInterop": false
   },
-  "include": ["src/**/*.js", "src/**/*.jsx", "src/**/*.ts", "src/**/*.tsx"],
+  "include": ["src/**/*.js", "src/**/*.jsx", "src/**/*.ts", "src/**/*.tsx", "stories/**/*.ts"],
   "exclude": ["node_modules", "src/**/*.spec.ts", "src/**/*.test.ts", "src/**/*.spec.tsx", "src/**/*.test.tsx"]
 }

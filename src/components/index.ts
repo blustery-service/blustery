@@ -77,6 +77,9 @@ export * from './Menu';
 export { default as Pagination } from './Pagination';
 export * from './Pagination';
 
+export { default as Popover } from './Popover';
+export * from './Popover';
+
 export * from './Progress';
 
 export { default as Radio } from './Radio';
